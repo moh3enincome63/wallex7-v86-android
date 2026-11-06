@@ -1,0 +1,30 @@
+name: Build Wallex 7 V86 Android APK
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip python3-venv \
+            autoconf automake libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev \
+            libtinfo5 cmake libffi-dev libssl-dev
+      - name: Install Buildozer
+        run: |
+          python3 -m pip install --user --upgrade pip setuptools wheel
+          python3 -m pip install --user buildozer cython==0.29.36
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - name: Build debug APK
+        run: buildozer -v android debug
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Wallex7-V86-Android-debug-APK
+          path: bin/*.apk
+          if-no-files-found: error
