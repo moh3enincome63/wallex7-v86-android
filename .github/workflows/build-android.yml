@@ -1,4 +1,4 @@
-name: .github/workflows/build-android.yml
+name: Build Wallex 7 V86 Android APK
 on:
   workflow_dispatch:
   push:
