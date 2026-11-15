@@ -1,3 +1,4 @@
+
 [app]
 title = Wallex 7 V86 Demo
 package.name = wallex7v86demo
@@ -8,7 +9,7 @@ source.include_exts = py,kv,png,jpg,atlas,json,txt
 
 version = 86.0.0
 
-requirements = python3,kivy==2.3.1,requests,websocket-client,pyjnius
+requirements = python3==3.13.16,hostpython3==3.13.16,kivy==2.3.1,requests,websocket-client,pyjnius
 
 orientation = portrait
 fullscreen = 0
