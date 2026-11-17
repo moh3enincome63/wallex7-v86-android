@@ -9,13 +9,13 @@ source.include_exts = py,kv,png,jpg,atlas,json,txt
 
 version = 86.0.0
 
-requirements = python3==3.13.16,hostpython3==3.13.16,kivy==2.3.1,requests,websocket-client,pyjnius
+requirements = python3==3.12.9,hostpython3==3.12.9,kivy==2.3.1,requests,websocket-client,pyjnius
 
 orientation = portrait
 fullscreen = 0
 icon.filename = %(source.dir)s/icon.png
 
-# Use stable Python-for-Android branch
+# Stable Python-for-Android branch
 p4a.branch = master
 
 # Android foreground service
