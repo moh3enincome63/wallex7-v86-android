@@ -25,7 +25,7 @@ services = PositionGuard:services/position_guard.py:foreground:sticky
 android.permissions = INTERNET,ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,WAKE_LOCK,POST_NOTIFICATIONS
 
 android.api = 33
-android.minapi = 24
+android.minapi = 26
 android.ndk = 25b
 android.archs = arm64-v8a, armeabi-v7a
 android.accept_sdk_license = True
