@@ -1,5 +1,6 @@
 
 [app]
+
 title = Wallex 7 V86 Demo
 package.name = wallex7v86demo
 package.domain = org.wallex7
@@ -13,23 +14,25 @@ requirements = python3==3.12.9,hostpython3==3.12.9,kivy==2.3.1,requests,websocke
 
 orientation = portrait
 fullscreen = 0
+
 icon.filename = %(source.dir)s/icon.png
 
-# Stable Python-for-Android branch
 p4a.branch = develop
+p4a.commit = 0382d27
 
-# Android foreground service
 services = PositionGuard:services/position_guard.py:foreground:sticky
 
-# Android permissions
 android.permissions = INTERNET,ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,WAKE_LOCK,POST_NOTIFICATIONS
 
 android.api = 33
 android.minapi = 26
 android.ndk = 25b
-android.archs = arm64-v8a, armeabi-v7a
+
+android.archs = arm64-v8a,armeabi-v7a
+
 android.accept_sdk_license = True
 
 [buildozer]
+
 log_level = 2
 warn_on_root = 1
