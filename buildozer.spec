@@ -16,7 +16,7 @@ fullscreen = 0
 icon.filename = %(source.dir)s/icon.png
 
 # Stable Python-for-Android branch
-p4a.branch = master
+p4a.branch = develop
 
 # Android foreground service
 services = PositionGuard:services/position_guard.py:foreground:sticky
