@@ -26,7 +26,7 @@ android.permissions = INTERNET,ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,WAKE_LOCK
 
 android.api = 33
 android.minapi = 26
-android.ndk = 25b
+android.ndk = 28c
 
 android.archs = arm64-v8a,armeabi-v7a
 
